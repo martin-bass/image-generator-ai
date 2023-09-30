@@ -8,7 +8,7 @@ function Gallery({ gallery }: Props) {
       <h1 className="w-full text-center font-bold">Your searches</h1>
       <div className="grid grid-cols-2 gap-3 mt-5">
         {gallery.map((img) => (
-          <div className="w-28 border-solid rounded-2xl">
+          <div className="w-28 border-solid rounded-2xl" key={img}>
             <img src={img} className="rounded-2xl"/>
           </div>
         ))}
