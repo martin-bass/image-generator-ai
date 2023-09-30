@@ -66,12 +66,12 @@ const HuggingFaceComponent = () => {
           Generate Image
         </button>
       </form>
-      <div className="flex items-center justify-center w-full h-96 bg-gray-300  rounded-2xl sm:w-96 dark:bg-gray-700">
+      <div className="flex items-center justify-center h-96 bg-gray-300 rounded-2xl sm:w-96 max-sm:w-96">
         {imageUrl ? (
-          <img src={imageUrl} className="w-full rounded-2xl" alt="Generated" />
+          <img src={imageUrl} className="rounded-2xl" alt="Generated" />
         ) : !isLoaded ? (
           <svg
-            className="w-10 h-10 text-gray-200 dark:text-gray-600"
+            className="w-10 h-10 text-gray-200"
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             fill="currentColor"
