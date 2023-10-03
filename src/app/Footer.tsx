@@ -7,7 +7,7 @@ function Footer() {
         <span className="text-sm text-gray-50 sm:text-center dark:text-gray-400">
           © 2023 Developed by Martín Lopez
         </span>
-        <div className="w-24 mx-8 flex flex-row justify-between text-gray-50">
+        <div className="w-24 mx-auto px-2 flex flex-row justify-between text-gray-50">
           <i>
             <a href="https://github.com/martin-bass" target="_blank">
               <AiFillGithub size={36} />

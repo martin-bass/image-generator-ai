@@ -54,7 +54,7 @@ const HuggingFaceComponent = () => {
         <input
           type="text"
           placeholder="Write your image..."
-          className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5"
+          className="bg-gray-50 border border-gray-300 text-gray-900 text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-96 p-2.5 max-mobile:w-80"
           onChange={(e) => setPrompt(e.target.value)}
           value={prompt}
           required
@@ -66,7 +66,7 @@ const HuggingFaceComponent = () => {
           Generate Image
         </button>
       </form>
-      <div className="flex items-center justify-center h-96 bg-gray-300 rounded-2xl sm:w-96 max-sm:w-96">
+      <div className="flex items-center justify-center h-auto bg-gray-300 rounded-2xl sm:w-96 max-sm:w-96 max-mobile:w-80">
         {imageUrl ? (
           <img src={imageUrl} className="rounded-2xl" alt="Generated" />
         ) : !isLoaded ? (
