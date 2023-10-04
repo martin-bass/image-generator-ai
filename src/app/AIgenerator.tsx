@@ -14,7 +14,7 @@ const HuggingFaceComponent = () => {
 
   const handleGenerateImage = async () => {
     try {
-      if (prompt != "") {
+      if (prompt !== "") {
         const response = await axios.post(
           "https://api-inference.huggingface.co/models/prompthero/openjourney",
           { inputs: prompt },
@@ -40,8 +40,7 @@ const HuggingFaceComponent = () => {
     setPrompt("");
     if (saveOk) {
       gallery.push(imageUrl);
-      gallery.filter((i) => i !== "");
-      setGallery(gallery);
+      setGallery(gallery.filter((i) => i !== ""));
     }
   };
 
