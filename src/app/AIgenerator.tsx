@@ -40,7 +40,7 @@ const HuggingFaceComponent = () => {
     setPrompt("");
     if (saveOk) {
       gallery.push(imageUrl);
-      gallery.filter((i) => i != "");
+      gallery.filter((i) => i !== "");
       setGallery(gallery);
     }
   };

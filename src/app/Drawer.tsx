@@ -4,16 +4,16 @@ import Gallery from "../app/Gallery";
 interface Props {
   saveOk: boolean;
   gallery: string[];
-  setSaveOk: any
+  setSaveOk: any;
   setGallery: any;
 }
 
-function Drawer({ saveOk, setSaveOk, gallery, setGallery }: Props) {
+function Drawer({ setSaveOk, gallery }: Props) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-    setSaveOk(true)
+    setSaveOk(true);
   };
 
   const hideDrawer = () => {
@@ -44,7 +44,7 @@ function Drawer({ saveOk, setSaveOk, gallery, setGallery }: Props) {
         aria-labelledby="drawer-label"
       >
         {/* Contenido del cajón aquí */}
-        <Gallery gallery={gallery}/>
+        <Gallery gallery={gallery} />
         {/* Botón para ocultar el cajón */}
         <button
           type="button"
