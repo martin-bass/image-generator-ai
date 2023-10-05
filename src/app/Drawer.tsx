@@ -2,18 +2,14 @@ import { useState } from "react";
 import Gallery from "../app/Gallery";
 
 interface Props {
-  saveOk: boolean;
   gallery: string[];
-  setSaveOk: any;
-  setGallery: any;
 }
 
-function Drawer({ setSaveOk, gallery }: Props) {
+function Drawer({ gallery }: Props) {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
-    setSaveOk(true);
   };
 
   const hideDrawer = () => {

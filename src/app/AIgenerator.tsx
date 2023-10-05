@@ -9,7 +9,6 @@ const HuggingFaceComponent = () => {
   const [prompt, setPrompt] = useState("");
   const [isLoaded, setIsLoaded] = useState(false);
 
-  const [saveOk, setSaveOk] = useState(false);
   const [gallery, setGallery] = useState<string[]>([]);
 
   const handleGenerateImage = async () => {
@@ -38,10 +37,8 @@ const HuggingFaceComponent = () => {
     e.preventDefault();
     setIsLoaded(true);
     setPrompt("");
-    if (saveOk) {
-      gallery.push(imageUrl);
-      setGallery(gallery.filter((i) => i !== ""));
-    }
+    gallery.push(imageUrl);
+    setGallery(gallery.filter((i) => i !== ""));
   };
 
   return (
@@ -100,12 +97,7 @@ const HuggingFaceComponent = () => {
           </div>
         )}
       </div>
-      <Drawer
-        setSaveOk={setSaveOk}
-        saveOk={saveOk}
-        gallery={gallery}
-        setGallery={setGallery}
-      />
+      <Drawer gallery={gallery} />
     </div>
   );
 };
